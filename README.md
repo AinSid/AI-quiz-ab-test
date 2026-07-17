@@ -41,7 +41,7 @@ Not a ship-to-everyone. A targeted rollout to users with sufficient history, whe
 
 ```
 pip install -r requirements.txt
-jupyter notebook notebooks/analysis.ipynb
+jupyter notebook analysis.ipynb
 ```
 
 The dataset is in `data/`. The notebook runs top to bottom.
