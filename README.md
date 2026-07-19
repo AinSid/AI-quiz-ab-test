@@ -4,7 +4,15 @@ Does giving students AI-generated quizzes built from their own mistakes get them
 
 [View the analysis notebook](./analysis.ipynb)
 
-<!-- Add the live dashboard link here after GitHub Pages deployment. -->
+## Dashboard
+
+I built an interactive dashboard to make the experiment and its results easy to explore. The notebook provides a detailed walkthrough of the statistical analysis and methodology.
+
+[Open the interactive dashboard](https://ab-test.site/)
+
+<p align="center">
+  <img src="assets/readme/dashboard-preview.png" alt="Interactive dashboard showing control and personalized quiz attempt rates with participant particles" width="100%">
+</p>
 
 ## The question
 
@@ -68,16 +76,6 @@ jupyter notebook analysis.ipynb
 ```
 
 The dataset is in `data/`. The notebook runs top to bottom.
-
-## Interactive dashboard
-
-I also built an interactive dashboard to make the experiment and its results easier to explore. The notebook remains the source of truth for the statistical analysis and methodology.
-
-<!-- Add the live dashboard link here after GitHub Pages deployment. -->
-
-<p align="center">
-  <img src="assets/readme/dashboard-preview.png" alt="Interactive dashboard showing control and personalized quiz attempt rates with participant particles" width="100%">
-</p>
 
 ## Stack
 
