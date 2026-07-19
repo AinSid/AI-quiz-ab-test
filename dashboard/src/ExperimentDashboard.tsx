@@ -393,6 +393,7 @@ export default function ExperimentDashboard() {
   const [metric, setMetric] = useState<MetricKey>("attempt");
   const [replayKey, setReplayKey] = useState(0);
   const [introComplete, setIntroComplete] = useState(false);
+  const [validityOpen, setValidityOpen] = useState(() => !window.matchMedia("(max-width: 640px)").matches);
   const completeIntro = useCallback(() => setIntroComplete(true), []);
 
   useEffect(() => {
@@ -547,7 +548,7 @@ export default function ExperimentDashboard() {
           <p>The sample was large, the groups were balanced, and the main result was statistically clear. These checks show what the test supports and where the evidence stops.</p>
         </div>
         <div className="analysis-details">
-          <details open>
+          <details open={validityOpen} onToggle={(event) => setValidityOpen(event.currentTarget.open)}>
             <summary><span>01</span><strong>Experiment validity</strong><small>Randomization and baseline balance</small><i>+</i></summary>
             <div className="detail-content detail-grid">
               <div><span>Final sample</span><strong>{data.experiment.cleanUsers.toLocaleString()}</strong><p>{data.experiment.removedImpossible} impossible rows and {data.experiment.removedDuplicates} duplicates removed.</p></div>
@@ -624,7 +625,10 @@ export default function ExperimentDashboard() {
             <nav className="personal-links" aria-label="Ain Siddiqui links">
               <a href="https://ain-siddiqui.com/" target="_blank" rel="noreferrer">Website</a>
               <a href="https://www.linkedin.com/in/ain1/" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://x.com/ain__siddiqui" target="_blank" rel="noreferrer">X / Twitter</a>
+              <a className="x-profile-link" href="https://x.com/ain__siddiqui" target="_blank" rel="noreferrer" aria-label="X, formerly Twitter">
+                <span className="desktop-link-label">X / Twitter</span>
+                <span className="mobile-link-label">X</span>
+              </a>
               <a href="https://github.com/AinSid" target="_blank" rel="noreferrer">GitHub</a>
               <a href="mailto:ain.sidd2@gmail.com">Email</a>
             </nav>

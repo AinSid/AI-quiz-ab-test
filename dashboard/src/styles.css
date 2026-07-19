@@ -1035,8 +1035,8 @@ main {
 
 .arm-label-treatment i,
 .hero-rate-treatment .rate-label i {
-  background: var(--acid);
-  box-shadow: 0 0 12px rgba(195, 255, 101, 0.7);
+  background: var(--violet);
+  box-shadow: 0 0 12px rgba(171, 125, 255, 0.7);
 }
 
 .hero-rates {
@@ -2013,6 +2013,10 @@ main {
   color: var(--acid);
 }
 
+.mobile-link-label {
+  display: none;
+}
+
 @keyframes modal-in {
   from { opacity: 0; }
   to { opacity: 1; }
@@ -2071,7 +2075,8 @@ main {
   .hero-copy { padding: 33px 0 25px; }
   .hero-result { padding: 62px 0 50px; }
   .hero h1 { font-size: clamp(1.73rem, 7.34vw, 2.41rem); line-height: 0.91; }
-  .hero-intro h1 { font-size: clamp(1.44rem, 6.34vw, 2.02rem); line-height: 1.02; }
+  .hero-intro > .eyebrow { display: none; }
+  .hero-intro h1 { font-size: clamp(1.34rem, 5.72vw, 1.82rem); line-height: 1.04; }
   .hero-result h2 { font-size: clamp(1.73rem, 7.34vw, 2.41rem); line-height: 0.91; }
   .hero-copy > p { font-size: 0.84rem; line-height: 1.52; }
   .hero-result > p { font-size: 0.84rem; line-height: 1.52; }
@@ -2081,21 +2086,31 @@ main {
   .replay-button { font-size: 0; }
   .replay-button::after { content: "↻"; font-size: 16px; }
   .arm-label { top: 74px; font-size: 11px; }
-  .arm-label-control { left: 15%; }
-  .arm-label-treatment { right: 10%; }
+  .arm-label-control { left: 10px; }
+  .arm-label-treatment { right: 10px; }
   .hero-rates { bottom: 42px; left: 10px; right: 10px; }
-  .hero-rate > strong { font-size: 2.6rem; }
+  .hero-rate > strong { font-size: 2.25rem; }
   .hero-rate > small { display: none; }
-  .rate-delta { min-width: 105px; padding: 10px; }
-  .rate-delta strong { font-size: 1.35rem; }
+  .rate-delta { min-width: 92px; padding: 8px; }
+  .rate-delta span,
+  .rate-delta small { font-size: 10px; }
+  .rate-delta strong { font-size: 1.15rem; }
   .particle-caption { left: 10px; right: 10px; font-size: 11px; }
   .particle-caption span:first-child { display: none; }
   .particle-caption { justify-content: flex-end; }
   .scroll-cue { padding-bottom: 22px; }
-  .outcome-strip { grid-template-columns: 1fr; }
-  .outcome-strip article { min-height: 170px; border-right: 0; border-bottom: 1px solid var(--line); }
-  .outcome-strip article:last-child { border-bottom: 0; }
-  .outcome-strip strong { font-size: 3.7rem; }
+  .outcome-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .outcome-strip article {
+    min-height: 158px;
+    padding: 17px 14px 16px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .outcome-strip article:nth-child(even) { border-right: 0; }
+  .outcome-strip article:nth-child(n + 3) { border-bottom: 0; }
+  .card-label { margin-top: 11px; font-size: 10px; line-height: 1.35; }
+  .outcome-strip strong { font-size: 1.85rem; }
+  .outcome-strip small { margin-top: 8px; font-size: 9px; line-height: 1.35; }
   .story-section,
   .analysis-section { padding: 76px 0; }
   .section-heading h2,
@@ -2106,8 +2121,18 @@ main {
   .bar-line { grid-template-columns: 72px 1fr 50px; gap: 9px; }
   .comparison-row > footer { justify-content: space-between; }
   .segment-grid { grid-template-columns: 1fr; }
-  .segment-card { min-height: 410px; }
-  .segment-lift strong { font-size: 4.7rem; }
+  .segment-card { min-height: 286px; padding: 16px; }
+  .segment-card-featured::after { display: none; }
+  .segment-card-topline { font-size: 10px; }
+  .segment-card h3 { margin: 18px 0 6px; font-size: 1.45rem; }
+  .segment-card > p { min-height: 0; font-size: 0.82rem; line-height: 1.45; }
+  .segment-lift { margin: 18px 0 14px; gap: 10px; }
+  .segment-lift strong { font-size: 2.65rem; }
+  .segment-lift span { font-size: 10px; }
+  .segment-rates { gap: 10px; padding: 10px 0; }
+  .segment-rates span { font-size: 10px; }
+  .segment-rates strong { font-size: 1.15rem; }
+  .segment-verdict { margin-top: 11px; padding: 6px 7px; font-size: 10px; }
   .segment-definition { grid-template-columns: 1fr; gap: 12px; }
   .decision-section { min-height: auto; padding: 78px 14px; }
   .decision-lede { margin-bottom: 55px; }
@@ -2115,13 +2140,15 @@ main {
   .analysis-details summary small { display: none; }
   .detail-content { padding-left: 0; }
   .site-footer { min-height: 125px; padding: 25px 18px; }
-  .metric-delta-key { top: 101px; max-width: 260px; font-size: 8px; }
+  .metric-delta-key { display: none; }
   .floating-github { right: 13px; bottom: 13px; padding: 12px 14px; font-size: 10px; }
   .about-backdrop { padding: 12px; }
   .about-modal { max-height: calc(100svh - 24px); }
   .about-modal h2 { font-size: 2rem; }
   .github-cta { min-height: auto; padding: 88px 18px; }
   .personal-modal p { font-size: 1.04rem; }
+  .x-profile-link .desktop-link-label { display: none; }
+  .x-profile-link .mobile-link-label { display: inline; }
   .explore-modal h2 { font-size: 1.42rem; }
   .explore-modal p { font-size: 1rem; }
 }
