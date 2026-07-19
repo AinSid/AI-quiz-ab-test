@@ -1,0 +1,450 @@
+{
+  "experiment": {
+    "title": "Personalized AI Quizzes",
+    "window": "June 9 to 15, 2026",
+    "rawRows": 64928,
+    "cleanUsers": 64888,
+    "removedImpossible": 3,
+    "removedDuplicates": 37,
+    "particleScale": 10
+  },
+  "arms": {
+    "control": {
+      "label": "Standard quiz",
+      "users": 32166
+    },
+    "personalized_quiz": {
+      "label": "Personalized AI quiz",
+      "users": 32722
+    }
+  },
+  "metrics": {
+    "attempt": {
+      "control": {
+        "success": 19239,
+        "total": 32166,
+        "rate": 0.5981160231300131
+      },
+      "treatment": {
+        "success": 20586,
+        "total": 32722,
+        "rate": 0.6291180245706253
+      },
+      "difference": 0.03100200144061216,
+      "z": 8.109535064513246,
+      "pValue": 4.440892098500626e-16,
+      "ci95": [
+        0.02351208424065314,
+        0.03849191864057118
+      ],
+      "significant": true
+    },
+    "completion": {
+      "control": {
+        "success": 17566,
+        "total": 19239,
+        "rate": 0.9130412183585426
+      },
+      "treatment": {
+        "success": 18380,
+        "total": 20586,
+        "rate": 0.8928397940347809
+      },
+      "difference": -0.020201424323761707,
+      "z": -6.794412967109639,
+      "pValue": 1.0875522704623108e-11,
+      "ci95": [
+        -0.026007201350466032,
+        -0.014395647297057383
+      ],
+      "significant": true
+    },
+    "overallCompletion": {
+      "control": {
+        "success": 17566,
+        "total": 32166,
+        "rate": 0.5461045824783933
+      },
+      "treatment": {
+        "success": 18380,
+        "total": 32722,
+        "rate": 0.5617016074812053
+      },
+      "difference": 0.015597025002812015,
+      "z": 3.9962519106732413,
+      "pValue": 6.435325457676555e-05,
+      "ci95": [
+        0.007948173720552846,
+        0.023245876285071184
+      ],
+      "significant": true
+    },
+    "retention": {
+      "control": {
+        "success": 9766,
+        "total": 32166,
+        "rate": 0.30361251010383633
+      },
+      "treatment": {
+        "success": 9993,
+        "total": 32722,
+        "rate": 0.3053908685288185
+      },
+      "difference": 0.001778358424982196,
+      "z": 0.49216372880362613,
+      "pValue": 0.6226036033686375,
+      "ci95": [
+        -0.005303559087451356,
+        0.008860275937415748
+      ],
+      "significant": false
+    }
+  },
+  "segments": {
+    "low": {
+      "users": 13210,
+      "attempt": {
+        "control": {
+          "success": 3949,
+          "total": 6627,
+          "rate": 0.5958955786932247
+        },
+        "treatment": {
+          "success": 3993,
+          "total": 6583,
+          "rate": 0.6065623575877259
+        },
+        "difference": 0.010666778894501183,
+        "z": 1.2518932277766206,
+        "pValue": 0.21060877279630041,
+        "ci95": [
+          -0.006031888492124847,
+          0.027365446281127213
+        ],
+        "significant": false
+      },
+      "completion": {
+        "control": {
+          "success": 3576,
+          "total": 3949,
+          "rate": 0.90554570777412
+        },
+        "treatment": {
+          "success": 3543,
+          "total": 3993,
+          "rate": 0.8873027798647634
+        },
+        "difference": -0.018242927909356665,
+        "z": -2.667124514624196,
+        "pValue": 0.007650332245450642,
+        "ci95": [
+          -0.03163714030823797,
+          -0.004848715510475358
+        ],
+        "significant": true
+      }
+    },
+    "higher": {
+      "users": 51678,
+      "attempt": {
+        "control": {
+          "success": 15290,
+          "total": 25539,
+          "rate": 0.5986921962488743
+        },
+        "treatment": {
+          "success": 16593,
+          "total": 26139,
+          "rate": 0.6347985768392058
+        },
+        "difference": 0.036106380590331555,
+        "z": 8.441621784214037,
+        "pValue": 0.0,
+        "ci95": [
+          0.02772729626208039,
+          0.04448546491858272
+        ],
+        "significant": true
+      },
+      "completion": {
+        "control": {
+          "success": 13990,
+          "total": 15290,
+          "rate": 0.9149771092217135
+        },
+        "treatment": {
+          "success": 14837,
+          "total": 16593,
+          "rate": 0.894172241306575
+        },
+        "difference": -0.02080486791513847,
+        "z": -6.3042634372313575,
+        "pValue": 2.8956748110431363e-10,
+        "ci95": [
+          -0.02724322340980502,
+          -0.014366512420471919
+        ],
+        "significant": true
+      }
+    }
+  },
+  "validity": {
+    "sampleRatio": {
+      "chiSquare": 4.764147454074713,
+      "pValue": 0.02905844735036598,
+      "alertThreshold": 0.001,
+      "passed": true
+    },
+    "baselineBalance": [
+      {
+        "metric": "questions_attempted_total",
+        "control": 84.74675122800473,
+        "treatment": 85.07490373449056,
+        "standardizedDifference": 0.006173504210981684
+      },
+      {
+        "metric": "bookmarks_count",
+        "control": 5.593701423863707,
+        "treatment": 5.658058798361958,
+        "standardizedDifference": 0.0153649611665234
+      },
+      {
+        "metric": "lectures_repeated",
+        "control": 2.661847913946403,
+        "treatment": 2.6575698306949453,
+        "standardizedDifference": -0.001855627860474416
+      },
+      {
+        "metric": "sessions_last_28d",
+        "control": 3.8638314225325048,
+        "treatment": 3.852307498186177,
+        "standardizedDifference": -0.0039056283348582483
+      }
+    ],
+    "power": {
+      "targetLift": 0.02,
+      "requiredPerArm": 9351,
+      "actualMde": 0.0108,
+      "power": 0.8,
+      "alpha": 0.05
+    }
+  },
+  "particleBins": [
+    {
+      "variant": "control",
+      "history": "higher",
+      "attempted": false,
+      "completed": false,
+      "retained": false,
+      "users": 7413,
+      "particles": 741
+    },
+    {
+      "variant": "control",
+      "history": "higher",
+      "attempted": false,
+      "completed": false,
+      "retained": true,
+      "users": 2836,
+      "particles": 284
+    },
+    {
+      "variant": "control",
+      "history": "higher",
+      "attempted": true,
+      "completed": false,
+      "retained": false,
+      "users": 914,
+      "particles": 91
+    },
+    {
+      "variant": "control",
+      "history": "higher",
+      "attempted": true,
+      "completed": false,
+      "retained": true,
+      "users": 386,
+      "particles": 39
+    },
+    {
+      "variant": "control",
+      "history": "higher",
+      "attempted": true,
+      "completed": true,
+      "retained": false,
+      "users": 9368,
+      "particles": 937
+    },
+    {
+      "variant": "control",
+      "history": "higher",
+      "attempted": true,
+      "completed": true,
+      "retained": true,
+      "users": 4622,
+      "particles": 462
+    },
+    {
+      "variant": "control",
+      "history": "low",
+      "attempted": false,
+      "completed": false,
+      "retained": false,
+      "users": 1955,
+      "particles": 196
+    },
+    {
+      "variant": "control",
+      "history": "low",
+      "attempted": false,
+      "completed": false,
+      "retained": true,
+      "users": 723,
+      "particles": 72
+    },
+    {
+      "variant": "control",
+      "history": "low",
+      "attempted": true,
+      "completed": false,
+      "retained": false,
+      "users": 274,
+      "particles": 27
+    },
+    {
+      "variant": "control",
+      "history": "low",
+      "attempted": true,
+      "completed": false,
+      "retained": true,
+      "users": 99,
+      "particles": 10
+    },
+    {
+      "variant": "control",
+      "history": "low",
+      "attempted": true,
+      "completed": true,
+      "retained": false,
+      "users": 2476,
+      "particles": 248
+    },
+    {
+      "variant": "control",
+      "history": "low",
+      "attempted": true,
+      "completed": true,
+      "retained": true,
+      "users": 1100,
+      "particles": 110
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "higher",
+      "attempted": false,
+      "completed": false,
+      "retained": false,
+      "users": 6951,
+      "particles": 695
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "higher",
+      "attempted": false,
+      "completed": false,
+      "retained": true,
+      "users": 2595,
+      "particles": 260
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "higher",
+      "attempted": true,
+      "completed": false,
+      "retained": false,
+      "users": 1254,
+      "particles": 125
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "higher",
+      "attempted": true,
+      "completed": false,
+      "retained": true,
+      "users": 502,
+      "particles": 50
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "higher",
+      "attempted": true,
+      "completed": true,
+      "retained": false,
+      "users": 9908,
+      "particles": 991
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "higher",
+      "attempted": true,
+      "completed": true,
+      "retained": true,
+      "users": 4929,
+      "particles": 493
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "low",
+      "attempted": false,
+      "completed": false,
+      "retained": false,
+      "users": 1916,
+      "particles": 192
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "low",
+      "attempted": false,
+      "completed": false,
+      "retained": true,
+      "users": 674,
+      "particles": 67
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "low",
+      "attempted": true,
+      "completed": false,
+      "retained": false,
+      "users": 302,
+      "particles": 30
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "low",
+      "attempted": true,
+      "completed": false,
+      "retained": true,
+      "users": 148,
+      "particles": 15
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "low",
+      "attempted": true,
+      "completed": true,
+      "retained": false,
+      "users": 2398,
+      "particles": 240
+    },
+    {
+      "variant": "personalized_quiz",
+      "history": "low",
+      "attempted": true,
+      "completed": true,
+      "retained": true,
+      "users": 1145,
+      "particles": 114
+    }
+  ]
+}
