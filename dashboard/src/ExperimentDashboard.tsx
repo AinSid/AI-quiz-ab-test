@@ -528,14 +528,16 @@ export default function ExperimentDashboard() {
 
       <section className="decision-section">
         <div className="decision-orbit" aria-hidden="true"><i /><i /><i /></div>
-        <span className="section-number"><strong>03</strong><span>Rollout decision</span></span>
-        <div className="decision-verdict"><span>DECISION</span><strong>Limited rollout</strong></div>
-        <h2>Launch it for old users,<br /><em>not everyone.</em></h2>
-        <p className="decision-lede">The feature is worth shipping to students with enough history. It still needs work before a full launch.</p>
-        <div className="decision-steps">
-          <article><span>01</span><h3>Start with old users</h3><p>Release personalization where past activity supports a reliable 3.6 point increase in quiz attempts.</p></article>
-          <article><span>02</span><h3>Work on completion</h3><p>Review quiz difficulty and learn why more starters quit before finishing.</p></article>
-          <article><span>03</span><h3>Design for new users</h3><p>Build an experience that needs less history, then test it over a longer retention window.</p></article>
+        <div className="decision-content">
+          <span className="section-number"><strong>03</strong><span>Rollout decision</span></span>
+          <div className="decision-verdict"><span>DECISION</span><strong>Limited rollout</strong></div>
+          <h2>Launch it for old users,<br /><em>not everyone.</em></h2>
+          <p className="decision-lede">The feature is worth shipping to students with enough history. It still needs work before a full launch.</p>
+          <div className="decision-steps">
+            <article><span>01</span><h3>Start with old users</h3><p>Release personalization where past activity supports a reliable 3.6 point increase in quiz attempts.</p></article>
+            <article><span>02</span><h3>Work on completion</h3><p>Review quiz difficulty and learn why more starters quit before finishing.</p></article>
+            <article><span>03</span><h3>Design for new users</h3><p>Build an experience that needs less history, then test it over a longer retention window.</p></article>
+          </div>
         </div>
       </section>
 

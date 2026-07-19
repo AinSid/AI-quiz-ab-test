@@ -732,14 +732,14 @@ main {
 .section-number:has(> strong) {
   display: inline-flex;
   align-items: baseline;
-  gap: 14px;
+  gap: clamp(20px, 1.8vw, 28px);
 }
 
 .section-number > strong {
   color: var(--acid);
   font-size: clamp(2.2rem, 3.2vw, 3.5rem);
   line-height: 0.8;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.04em;
 }
 
 .section-number > span {
@@ -1235,14 +1235,14 @@ main {
 .analysis-section {
   width: min(1400px, 93.5vw);
   margin: 0 auto;
-  padding: clamp(78px, 7.5vw, 115px) 0;
+  padding: clamp(58px, 5vw, 78px) 0;
 }
 
 .section-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.45fr);
-  column-gap: 7vw;
-  row-gap: clamp(26px, 2.5vw, 40px);
+  grid-template-columns: minmax(0, 1.35fr) minmax(340px, 0.65fr);
+  column-gap: clamp(32px, 4vw, 64px);
+  row-gap: clamp(18px, 1.8vw, 28px);
   align-items: end;
   margin-bottom: clamp(44px, 5vw, 72px);
 }
@@ -1387,12 +1387,12 @@ main {
 }
 
 .section-heading-split {
-  grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.5fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(340px, 0.65fr);
 }
 
 .section-heading-split .section-number {
   grid-column: auto;
-  display: block;
+  display: inline-flex;
   margin: 0 0 28px;
   font-size: clamp(1.1rem, 1.65vw, 1.55rem);
 }
@@ -1556,8 +1556,8 @@ main {
 .decision-section {
   position: relative;
   min-height: auto;
-  padding: clamp(82px, 8vw, 120px) 3.25vw;
-  text-align: center;
+  padding: clamp(58px, 5vw, 78px) 0;
+  text-align: left;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
   background:
@@ -1571,7 +1571,17 @@ main {
   z-index: 2;
 }
 
+.decision-content {
+  width: min(1400px, 93.5vw);
+  margin: 0 auto;
+}
+
 .decision-section .section-number {
+  display: flex;
+  justify-content: flex-start;
+  width: auto;
+  margin: 0;
+  text-align: left;
   color: var(--acid);
   font-size: clamp(1.1rem, 1.65vw, 1.55rem);
   font-weight: 650;
@@ -1579,7 +1589,7 @@ main {
 
 .decision-verdict {
   width: fit-content;
-  margin: 42px auto 31px;
+  margin: 34px 0 26px;
   padding: 9px 13px;
   border: 1px solid rgba(195, 255, 101, 0.32);
   background: rgba(195, 255, 101, 0.045);
@@ -1595,14 +1605,14 @@ main {
 .decision-verdict strong { color: var(--acid); font-weight: 600; }
 
 .decision-section h2 {
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 980px;
+  margin: 0;
   font-size: clamp(2.05rem, 3.35vw, 4rem);
 }
 
 .decision-lede {
-  max-width: 580px;
-  margin: 34px auto 80px;
+  max-width: 720px;
+  margin: 30px 0 64px;
   color: var(--muted-bright);
   font-size: 1.25rem;
   line-height: 1.65;
@@ -1610,7 +1620,7 @@ main {
 
 .decision-steps {
   width: min(1240px, 100%);
-  margin: 0 auto;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--line);
@@ -2112,7 +2122,7 @@ main {
   .outcome-strip strong { font-size: 1.85rem; }
   .outcome-strip small { margin-top: 8px; font-size: 9px; line-height: 1.35; }
   .story-section,
-  .analysis-section { padding: 76px 0; }
+  .analysis-section { padding: 58px 0; }
   .section-heading h2,
   .decision-section h2,
   .github-cta h2 { font-size: clamp(1.73rem, 7.34vw, 2.41rem); line-height: 0.91; }
@@ -2134,7 +2144,8 @@ main {
   .segment-rates strong { font-size: 1.15rem; }
   .segment-verdict { margin-top: 11px; padding: 6px 7px; font-size: 10px; }
   .segment-definition { grid-template-columns: 1fr; gap: 12px; }
-  .decision-section { min-height: auto; padding: 78px 14px; }
+  .decision-section { min-height: auto; padding: 58px 14px; }
+  .decision-content { width: 100%; }
   .decision-lede { margin-bottom: 55px; }
   .analysis-details summary { grid-template-columns: 35px 1fr auto; gap: 12px; min-height: 86px; }
   .analysis-details summary small { display: none; }

@@ -17,8 +17,9 @@ test("dashboard source includes the experiment narrative and profile", async () 
 test("production build contains dashboard metadata", async () => {
   const html = await readFile(new URL("../dist/index.html", import.meta.url), "utf8");
 
-  assert.match(html, /Personalized AI Quizzes \| A\/B Test Decision/);
-  assert.match(html, /og\.png/);
+  assert.match(html, /Personalized Quiz A\/B Test/);
+  assert.match(html, /59\.8% quiz attempt rate in control vs\. 62\.9% with personalization/);
+  assert.match(html, /social-preview\.png/);
   assert.match(html, /id="root"/);
 });
 
