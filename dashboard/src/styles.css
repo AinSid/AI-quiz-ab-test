@@ -2128,7 +2128,8 @@ main {
   .github-cta h2 { font-size: clamp(1.73rem, 7.34vw, 2.41rem); line-height: 0.91; }
   .comparison-row > header { grid-template-columns: 1fr; }
   .significance { width: fit-content; }
-  .bar-line { grid-template-columns: 72px 1fr 50px; gap: 9px; }
+  .bar-line { grid-template-columns: 88px minmax(0, 1fr) 46px; gap: 8px; }
+  .bar-line > span { font-size: 10px; white-space: nowrap; }
   .comparison-row > footer { justify-content: space-between; }
   .segment-grid { grid-template-columns: 1fr; }
   .segment-card { min-height: 286px; padding: 16px; }
